@@ -1,5 +1,7 @@
 Y1000 file repo test
 
+Data can be accessed directly at https://data.glbrc.org/shared_collections/321/shared?ak=a9a366fec2223e1a11a6f6a401cae257
+
 |Dataset|Figshare|
 |-|-|
 |Genomes|[Genomes and annotations v2](https://plus.figshare.com/articles/dataset/Genome_Analyses_of_1_154_budding_yeasts/22802147)|
