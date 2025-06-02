@@ -4,11 +4,12 @@ Current Data Release:
 V1.0
 
 How to access data:
-...
+```
 git clone https://github.com/HittingerLab/Y1000_Repo.git
+cd Y1000_Repo
 bash download_data.sh
 bash prepare_data.sh
-...
+```
 
 Description of files:
 
