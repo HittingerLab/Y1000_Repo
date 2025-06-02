@@ -1,6 +1,33 @@
 Y1000 file repo test
 
-Data can be accessed directly at https://data.glbrc.org/shared_collections/321/shared?ak=a9a366fec2223e1a11a6f6a401cae257
+Current Data Release:
+V1.0
+
+How to access data:
+...
+git clone https://github.com/HittingerLab/Y1000_Repo.git
+bash download_data.sh
+bash prepare_data.sh
+...
+
+Description of files:
+
+All downloaded data will be stored in Y1000_Repo/data/original
+
+Soft links to the raw files will be in Y1000_Repo/data/BySpecies and Y1000_Repo/data/ByDataType
+
+BySpecies: All files corresponding to the Species ID in one folder
+
+ByDataType: All files of that DataType (genome,pep,cds,gff3, or gtf) in one folder
+
+A table with file paths using the soft links in Y1000_Repo/data/ByDataType will be automatically genered as:
+File_paths.tsv
+
+Description of Data Releases:
+V1.0 Exact copy of figshare data accompanying Opulente et al. 2024
+Can be accessed directly at https://data.glbrc.org/shared_collections/341/shared?ak=8c2aa328e739ae78d0c08e8711b98a0e
+
+The Data in the original figshare can be accessed below:
 
 |Dataset|Figshare|
 |-|-|
