@@ -73,13 +73,11 @@ while read line ; do
 
 	echo -e "$spID\t$newgenome\t$newpep\t$newcds\t$newgff3\t$newgtf" >> File_paths.tsv
 
-done < File_guide.tsv
+done < temp
 rm temp
 
 
 ##Cleanup
-rm "Y1000+ Data Release 1.0.0"
-rm datacat_shared_collection_341_2025-05-28-17-28-30.zip
 rm genomes.tar.gz
 rm pep.tar.gz
 rm cds.tar.gz
@@ -87,3 +85,4 @@ rm gtf.tar.gz
 rm gff3.tar.gz
 rm y1000.outgroups.tar.gz
 rm orthofinder.tar.gz
+rm Y1000dataV1.0.zip
