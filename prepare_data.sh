@@ -86,3 +86,4 @@ rm gff3.tar.gz
 rm y1000.outgroups.tar.gz
 rm orthofinder.tar.gz
 rm Y1000dataV1.0.zip
+rm Y1000dataV1.0_20250430.tar.gz
