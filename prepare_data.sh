@@ -1,6 +1,6 @@
 #!/bin/bash
 
-unzip datacat_shared_collection_341_2025-05-28-17-28-30.zip
+unzip Y1000dataV1.0.zip
 mv 'Y1000+ Data Release 1.0.0'/Y1000dataV1.0_20250430.tar.gz .
 rm -rf 'Y1000+ Data Release 1.0.0'
 
