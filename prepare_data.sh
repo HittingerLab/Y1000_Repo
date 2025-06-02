@@ -51,27 +51,39 @@ while read line ; do
 	
 	mkdir ./data/BySpecies/$spID
 	
-	ln -s ./data/original/genomes/$genome ./data/ByDataType/genomes/$spID.fsa
-	ln -s ./data/original/genomes/$genome ./data/BySpecies/$spID/$spID.fsa
+	ln -s $(pwd)/data/original/genomes/$genome ./data/ByDataType/genomes/$spID.fsa
+	ln -s $(pwd)/data/original/genomes/$genome ./data/BySpecies/$spID/$spID.fsa
 	newgenome="$(echo $PWD)""/data/ByDataType/genomes/$spID.fsa"
 	
-	ln -s ./data/original/pep/$pep ./data/ByDataType/pep/$spID.pep
-	ln -s ./data/original/pep/$pep ./data/BySpecies/$spID/$spID.pep
+	ln -s $(pwd)/data/original/pep/$pep ./data/ByDataType/pep/$spID.pep
+	ln -s $(pwd)/data/original/pep/$pep ./data/BySpecies/$spID/$spID.pep
 	newpep="$(echo $PWD)""/data/ByDataType/pep/$spID.pep"
 
-	ln -s ./data/original/cds/$cds ./data/ByDataType/cds/$spID.cds
-	ln -s ./data/original/cds/$cds ./data/BySpecies/$spID/$spID.cds
+	ln -s $(pwd)/data/original/cds/$cds ./data/ByDataType/cds/$spID.cds
+	ln -s $(pwd)/data/original/cds/$cds ./data/BySpecies/$spID/$spID.cds
 	newcds="$(echo $PWD)""/data/ByDataType/cds/$spID.cds"
 
-	ln -s ./data/original/gtf/$gtf ./data/ByDataType/gtf/$spID.gtf
-	ln -s ./data/original/gtf/$gtf ./data/BySpecies/$spID/$spID.gtf
+	ln -s $(pwd)/data/original/gtf/$gtf ./data/ByDataType/gtf/$spID.gtf
+	ln -s $(pwd)/data/original/gtf/$gtf ./data/BySpecies/$spID/$spID.gtf
 	newgtf="$(echo $PWD)""/data/ByDataType/gtf/$spID.gtf"
 
-	ln -s ./data/original/gff3/$gff3 ./data/ByDataType/gff3/$spID.gff3
-	ln -s ./data/original/gff3/$gff3 ./data/BySpecies/$spID/$spID.gff3
+	ln -s $(pwd)/data/original/gff3/$gff3 ./data/ByDataType/gff3/$spID.gff3
+	ln -s $(pwd)/data/original/gff3/$gff3 ./data/BySpecies/$spID/$spID.gff3
 	newgff3="$(echo $PWD)""/data/ByDataType/gff3/$spID.gff3"
 
 	echo -e "$spID\t$newgenome\t$newpep\t$newcds\t$newgff3\t$newgtf" >> File_paths.tsv
 
 done < File_guide.tsv
 rm temp
+
+
+##Cleanup
+rm "Y1000+ Data Release 1.0.0"
+rm datacat_shared_collection_341_2025-05-28-17-28-30.zip
+rm genomes.tar.gz
+rm pep.tar.gz
+rm cds.tar.gz
+rm gtf.tar.gz
+rm gff3.tar.gz
+rm y1000.outgroups.tar.gz
+rm orthofinder.tar.gz
